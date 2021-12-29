@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "funbankapp": "apps/funbankapp",
+    "funbankapp-e2e": "apps/funbankapp-e2e"
+  }
+}

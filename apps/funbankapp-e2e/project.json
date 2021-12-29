@@ -1,0 +1,28 @@
+{
+  "root": "apps/funbankapp-e2e",
+  "sourceRoot": "apps/funbankapp-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/funbankapp-e2e/cypress.json",
+        "devServerTarget": "funbankapp:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "funbankapp:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/funbankapp-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["funbankapp"]
+}
